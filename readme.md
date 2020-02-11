@@ -79,6 +79,6 @@ URLs.py:
     "It's all teh correct paths"
 
 Future plans to implement:
-    Automagiclaly assign tasks to current group(Fills in group section in form)
-    Finishing a task automatically deletes it
-    Make it look less terrible
+    --Automagiclaly assign tasks to current group(Fills in group section in form)
+    --Finishing a task automatically deletes it
+    --Make it look less terrible
