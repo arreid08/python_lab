@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="detail">
+  <h1>{{group.group_name}}</h1>
+    {% for task in group.tasks.all %}
+    <h2>{{task.task_name}}</h2>
+    <a class="edit" href="{% url 'task_update' id=task.id %}">edit</a>
+    <form action="{% url 'task_delete' id=task.id %}" method="POST">
+      {% csrf_token %}
+      <input class="delete" type="submit" value="delete">
+    </form>
+    {% endfor %}
+    <a class="task-create" href="/tasks/create">New Task</a>
+    <a class="task-create" href="/groups">Main Page</a>
+  </div>
+{% endblock %}

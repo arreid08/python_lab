@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1 class="title">Your Personal Todo List</h1>
+  {% for group in groups %}
+    <div class="group">
+      <h2><a href="/groups/{{group.id}}">{{group.group_name}}</a></h2>
+    </div>
+  {% endfor %}
+  <div class="create">
+    <a href="/groups/create">New Group</a>
+  </div>
+{% endblock %}
