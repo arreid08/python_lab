@@ -1,10 +1,10 @@
 Python Lab -- To Do List
 
-This repo is a simple to do list built using python, django, andh html/css.
+This repo is a simple to do list built using python, django, and html/css.
 
 Here you will be able to add, update, and delete various tasks and things you may need to get done.
 
-Our models and forms are Tasks and Groups. Groups group all the various tasks together. These can be any name, but we choose days of the week in our intial seed for consistancy. Tasks are things to do get done. We have an intial seed to get started. There is also some included CSS to get things started.
+Our models and forms are Tasks and Groups. Groups group all the various tasks together. These can be any name, but we choose days of the week in our initial seed for consistency. Tasks are things to do get done. We have an initial seed to get started. There is also some included CSS to get things started.
 
 SETTINGS.py
 
@@ -27,8 +27,8 @@ Models.py:
     Task:
         task_name = name of task, CharField
         finished = boolean value(true/false)
-        notes = additonal notes, TextField
-        group = links to group model, ForiegnKey
+        notes = additional notes, TextField
+        group = links to group model, ForeignKey
 
 Forms.py:
 
@@ -37,8 +37,8 @@ Forms.py:
 
     Task:
         task_name = name if the task
-        finished = auto potulates to false
-        notes = addiotnal information
+        finished = auto populates to false
+        notes = additional information
         group = assign it to a group
 
 Views.py:
@@ -76,9 +76,9 @@ Views.py:
 
 URLs.py:
     path '':
-    "It's all teh correct paths"
+    "It's all the correct paths"
 
 Future plans to implement:
-    --Automagiclaly assign tasks to current group(Fills in group section in form)
+    --Automatically assign tasks to current group(Fills in group section in form)
     --Finishing a task automatically deletes it
     --Make it look less terrible

@@ -9,7 +9,7 @@ class Group(models.Model):
 class Task(models.Model):
     task_name = models.CharField(max_length=100)
     finished = models.BooleanField(default=False)
-    notes = models.TextField()
+    notes = models.TextField(blank=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='tasks')
     
     def __str__(self):

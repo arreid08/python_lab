@@ -6,6 +6,8 @@
   {% for group in groups %}
     <div class="group">
       <h2><a href="/groups/{{group.id}}">{{group.group_name}}</a></h2>
+      <a href="{% url 'group_update' id=group.id %}">Edit</a>
+      <a href="{% url 'group_delete' id=group.id %}">Delete</a>
     </div>
   {% endfor %}
   <div class="create">

@@ -9,7 +9,16 @@ def group_list(request):
 
 def group_detail(request, id):
     group = Group.objects.get(id = id)
-    return render(request, 'group_detail.html', {'group': group})
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = form.save(commit=False)
+            task.group_id = id
+            task.save()
+            return redirect('group_detail', id=id)
+    else: 
+        form = TaskForm()
+    return render(request, 'group_detail.html', {'group': group, 'form': form})
 
 def group_create(request):
     if request.method == 'POST':
@@ -27,7 +36,7 @@ def group_update(request, id):
         form = GroupForm(request.POST, instance = group)
         if form.is_valid:
             group = form.save()
-            return redirect('group_detail', id = group.id)
+            return redirect('group_list')
     else:
         form = GroupForm(instance = group)
         return render(request, 'group_form.html', {'form': form})
