@@ -28,7 +28,7 @@ SECRET_KEY = 'atu1o+r0h$^s_%vd0idk6^fpbym6l5s&j&ahb-#mh94)ultk%)'
 # EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'gatodolist.herokuapp.com']
 
