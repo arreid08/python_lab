@@ -87,7 +87,7 @@ DATABASES = {
         'NAME': 'postgresql-regular-86190',
         'USER': 'todouser',
         'PASSWORD': 'todo',
-        'HOST': 'postgres://cdtsqugjckbrkm:62db128a934a792ecc46278ab01eb77a60e108167cf0a8cf7bac28f242baaa26@ec2-3-231-46-238.compute-1.amazonaws.com',
+        'HOST': 'postgres://cdtsqugjckbrkm:62db128a934a792ecc46278ab01eb77a60e108167cf0a8cf7bac28f242baaa26@ec2-3-231-46-238.compute-1.amazonaws.com:5432/deomob2cv97j2m',
     }
 }
 
