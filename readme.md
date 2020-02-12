@@ -82,3 +82,9 @@ Future plans to implement:
     --Automatically assign tasks to current group(Fills in group section in form)
     --Finishing a task automatically deletes it
     --Make it look less terrible
+
+
+### Heroku Info
+- Heroku app name = todolistga
+- Heroku DB name = postgresql-regular-86190
+- DATABASE_URL='postgres://cdtsqugjckbrkm:62db128a934a792ecc46278ab01eb77a60e108167cf0a8cf7bac28f242baaa26@ec2-3-231-46-238.compute-1.amazonaws.com:5432/deomob2cv97j2m'

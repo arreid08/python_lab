@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todo',
+        'NAME': 'postgresql-regular-86190',
         'USER': 'todouser',
         'PASSWORD': 'todo',
-        'HOST': 'localhost',
+        'HOST': 'postgres://cdtsqugjckbrkm:62db128a934a792ecc46278ab01eb77a60e108167cf0a8cf7bac28f242baaa26@ec2-3-231-46-238.compute-1.amazonaws.com',
     }
 }
 
@@ -134,6 +134,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'project_name/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR,'todo/static')]
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
