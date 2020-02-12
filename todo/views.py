@@ -1,14 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import Group, Task
 from .forms import GroupForm, TaskForm
-from django.contrib.auth.decorators import login_required
 
-@login_required
 def group_list(request):
     groups = Group.objects.all()
     return render(request, 'group_list.html', {'groups': groups})
 
-@login_required
 def group_detail(request, id):
     group = Group.objects.get(id = id)
     if request.method == 'POST':
@@ -22,7 +19,6 @@ def group_detail(request, id):
         form = TaskForm()
     return render(request, 'group_detail.html', {'group': group, 'form': form})
 
-@login_required
 def group_create(request):
     if request.method == 'POST':
         form = GroupForm(request.POST)
@@ -33,7 +29,6 @@ def group_create(request):
         form = GroupForm()
         return render(request, 'group_form.html', {'form': form})
 
-@login_required
 def group_update(request, id):
     group = Group.objects.get(id = id)
     if request.method == 'POST':
@@ -45,22 +40,18 @@ def group_update(request, id):
         form = GroupForm(instance = group)
         return render(request, 'group_form.html', {'form': form})
 
-@login_required
 def group_delete(request, id):
     Group.objects.get(id = id).delete()
     return redirect('group_list')
 
-@login_required
 def task_list(request):
     tasks = Task.objects.all()
     return render(request, 'task_list.html', {'tasks': tasks})
 
-@login_required
 def task_detail(request, id):
     task = Task.objects.get(id = id)
     return render(request, 'task_detail.html', {'task': task})
 
-@login_required
 def task_update(request, id):
     task = Task.objects.get(id = id)
     if request.method == 'POST':
@@ -72,7 +63,6 @@ def task_update(request, id):
         form = TaskForm(instance = task)
         return render(request, 'task_form.html', {'form': form})
 
-@login_required
 def task_delete(request, id):
     task = Task.objects.get(id = id)
     task.delete()
