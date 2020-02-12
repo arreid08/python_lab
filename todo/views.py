@@ -61,17 +61,6 @@ def task_detail(request, id):
     return render(request, 'task_detail.html', {'task': task})
 
 @login_required
-def task_create(request):
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
-        if form.is_valid:
-            task = form.save()
-            return redirect('group_detail', id = task.group_id)
-    else:
-        form = TaskForm()
-        return render(request, 'task_form.html', {'form': form})
-
-@login_required
 def task_update(request, id):
     task = Task.objects.get(id = id)
     if request.method == 'POST':
